@@ -1,8 +1,24 @@
-import styles from '../styles/Home.module.css'
+type HomeProps = {
+  handleSeedChange: (key: string, value: string | number) => void,
+  inventory: {
+    seeds: {
+      onion: number,
+      potato: number
+    },
+  },
+}
 
-const Home = () => {
+const Home = ({ handleSeedChange, inventory }: HomeProps) => {
   return (
-    <div className={styles.container}>
+    <div>
+      <button
+        onClick={() => {
+          handleSeedChange('onion', inventory.seeds.onion + 1)
+        }}
+      >
+        Increment the onion
+      </button>
+      {JSON.stringify(inventory)}
     </div>
   )
 }
