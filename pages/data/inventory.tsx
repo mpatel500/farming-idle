@@ -1,13 +1,12 @@
-const defaultInventory = {
+export const defaultInventory = {
     seeds: {
         onion: 10,
         potato: 10,
     },
 }
 
-const getInventory = () => {
+export const getInventory = () => {
     const currentInventory = window.localStorage.getItem('inventory');
-    return currentInventory || defaultInventory;
+    if (currentInventory) return JSON.parse(currentInventory)
+    return defaultInventory;
 }
-
-export default getInventory;
