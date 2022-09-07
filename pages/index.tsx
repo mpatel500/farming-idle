@@ -1,3 +1,5 @@
+import Grid from '../components/Grid';
+
 type HomeProps = {
   handleSeedChange: (key: string, value: string | number) => void,
   inventory: {
@@ -10,16 +12,7 @@ type HomeProps = {
 
 const Home = ({ handleSeedChange, inventory }: HomeProps) => {
   return (
-    <div>
-      <button
-        onClick={() => {
-          handleSeedChange('onion', inventory.seeds.onion + 1)
-        }}
-      >
-        Increment the onion
-      </button>
-      {JSON.stringify(inventory)}
-    </div>
+    <Grid />
   )
 }
 
