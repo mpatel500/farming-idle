@@ -10,7 +10,7 @@ type HomeProps = {
   },
 }
 
-const Home = ({ handleSeedChange, inventory }: HomeProps) => {
+const Home = (props: HomeProps) => {
   return (
     <Grid />
   )
