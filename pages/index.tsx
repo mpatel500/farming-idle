@@ -12,7 +12,9 @@ type HomeProps = {
 
 const Home = (props: HomeProps) => {
   return (
-    <Grid />
+    <div className='container'>
+      <Grid />
+    </div>
   )
 }
 

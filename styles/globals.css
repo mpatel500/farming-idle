@@ -11,6 +11,9 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
 }
